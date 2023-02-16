@@ -31,15 +31,15 @@ if __name__ == "__main__":
     state_size = 104        # feature 1~8 size = 104 / 176
     action_size = 12
 
-    model_dir = 'output/train/model/ppo/'
+    model_dir = '../output/train/model/'
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
 
-    log_path = 'result/model/ppo'
+    log_path = '../output/train/log/'
     if not os.path.exists(log_path):
         os.makedirs(log_path)
 
-    event_path = 'environment/result/ppo'
+    event_path = '../output/train/log/'
     if not os.path.exists(event_path):
         os.makedirs(event_path)
     env = UPMSP(log_dir=event_path, num_j=1000,num_m=8, action_number = action_size, min = 0.01, max = 4, action_mode = 'WCOVERT')         # 환경을 설정하기 위한 파라미터
